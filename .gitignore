@@ -1,0 +1,40 @@
+# ---- 运行时产物（含真实记忆，绝不入库）----
+sync-state.db
+sync-state.db-*
+*sync-state*.db
+_test-state.db
+export/
+*.jsonl
+!bridge/fixtures/companion-export.example.jsonl
+*.watermark
+
+# ---- 凭据 / 配置 ----
+.env
+.env.*
+credentials.json
+secrets.json
+*.pem
+*.key
+
+# ---- 日志 / 备份 ----
+*.log
+*.bak
+*.bak-*
+*.tmp
+*.zip
+
+# ---- 依赖 / 缓存 ----
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.tmp/
+.DS_Store
+Thumbs.db
+
+# ---- 编辑器 ----
+.vscode/
+.idea/
+*.swp
