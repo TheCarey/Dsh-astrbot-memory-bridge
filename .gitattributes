@@ -1,0 +1,5 @@
+# 统一换行，避免 Windows 检出时把 LF 改成 CRLF
+* text=auto eol=lf
+*.db binary
+*.zip binary
+*.png binary
