@@ -1,0 +1,23 @@
+# NOTICE
+
+本仓库（dsh-astrbot-memory-bridge）的全部代码由 TheCarey 编写并采用 MIT 许可发布。
+
+## 第三方组件
+
+本仓库**不包含**任何第三方项目的代码副本，因此没有随附第三方 LICENSE 文件。
+仓库在运行时与以下项目交互，其名称与接口仅用于说明兼容性，版权归各自作者所有：
+
+| 项目 | 关系 | 说明 |
+| --- | --- | --- |
+| **AstrBot** | 宿主框架 | 导出插件通过 `astrbot.api` 提供的 `Star` / `register` 接口注册；这些接口由 AstrBot 提供，不随本仓库分发。 |
+| **astrbot_plugin_private_companion（「我会永远陪着你」）** | 数据源 | 本仓库只以 SQLite `mode=ro` 只读方式读取它的 `companion-v2.sqlite3`，不包含其源码，也不代表其作者立场。 |
+| **DeepSeek Harness (DSH)** | 消费端 | DSH 侧插件使用 DSH 的 `systemPrompt` / `tools` 扩展点，接口由 DSH 提供。 |
+| **QQ / NapCat / aiocqhttp** | 消息通道 | 仅在文档中出现，用于描述数据来源；本仓库不与其交互。 |
+
+`docs/private_companion-schema.md` 是对第三方插件**数据库字段**的互操作性说明（事实性描述），
+不含任何第三方源代码。若上游作者认为该文档不妥，请联系后删除。
+
+## 商标
+
+"QQ"、"Tencent"、"DeepSeek"、"AstrBot" 等名称与商标归各自所有者。本项目使用这些名称仅为
+描述性的兼容性说明，**不表示任何隶属、赞助或背书关系**。

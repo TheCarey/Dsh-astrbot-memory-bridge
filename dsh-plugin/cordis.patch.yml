@@ -1,0 +1,4 @@
+# dsh-astrbot-memory-bridge bundle patch：把本插件作为一行插进 profile 条目列表
+- insert:
+    - id: astrbot-memory-bridge
+      name: 'dsh-astrbot-memory-bridge'

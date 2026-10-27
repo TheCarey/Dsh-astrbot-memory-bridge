@@ -1,0 +1,38 @@
+{
+  "name": "dsh-astrbot-memory-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "把 AstrBot 陪伴插件里的 QQ 陪伴记忆只读同步进 DSH：首轮摘要注入 + 三个检索工具（单向 AstrBot→DSH，自维护 sync-state.db）",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node tests/test-plugin.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "astrbot",
+    "memory",
+    "qq"
+  ],
+  "author": "TheCarey",
+  "license": "MIT"
+}

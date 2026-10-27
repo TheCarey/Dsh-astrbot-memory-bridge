@@ -1,0 +1,7 @@
+name: dsh_bridge_exporter
+display_name: DSH 记忆桥导出
+desc: 只读导出陪伴插件「我会永远陪着你」的记忆给 DSH（默认监听 127.0.0.1:6197）
+version: 0.1.0
+author: TheCarey
+repo: https://github.com/TheCarey/dsh-astrbot-memory-bridge
+astrbot_version: ">=4.27.0"

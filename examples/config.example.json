@@ -1,0 +1,45 @@
+{
+  "_comment": "占位符配置示例。复制成你自己的配置后，把 <...> 全部替换掉；真实值不要提交进仓库。",
+
+  "dshPlugin": {
+    "_comment": "DSH 侧插件的 apply(ctx, config) 参数，或写进 profile 的插件配置",
+    "dbPath": "<STATE_DB>",
+    "injectLimit": 6,
+    "sourceLabel": "来源=QQ 陪伴",
+    "timeZone": "<Asia/Shanghai>"
+  },
+
+  "astrbotPlugin": {
+    "_comment": "AstrBot 插件 dsh_bridge_exporter 的配置项",
+    "db_root": "<ASTROBOT_HOME>/data/plugin_data/astrbot_plugin_private_companion",
+    "exporter_path": "<REPO_DIR>/bridge/export_companion.py",
+    "export_token": "<LOCAL_TOKEN>",
+    "listen_port": 6197
+  },
+
+  "bridge": {
+    "_comment": "bridge/sync.py 的默认值与命令行参数对照；env 列见 README 配置项表",
+    "state": "<STATE_DB>",
+    "input": "./export/companion-export.jsonl",
+    "url": "http://127.0.0.1:<LOCAL_PORT>/export",
+    "token": "<LOCAL_TOKEN>",
+    "since": null,
+    "dry_run": false
+  },
+
+  "environment": {
+    "_comment": "不想用配置文件时的环境变量写法（键 = 变量名，值 = 占位符）",
+    "DSH_ASTRBOT_SYNC_DB": "<STATE_DB>",
+    "DSH_SYNC_STATE": "<STATE_DB>",
+    "DSH_SYNC_INPUT": "./export/companion-export.jsonl",
+    "DSH_BRIDGE_URL": "http://127.0.0.1:<LOCAL_PORT>/export",
+    "DSH_BRIDGE_TOKEN": "<LOCAL_TOKEN>",
+    "DSH_BRIDGE_PORT": "6197",
+    "DSH_BRIDGE_DB_ROOT": "<ASTROBOT_HOME>/data/plugin_data/astrbot_plugin_private_companion",
+    "DSH_BRIDGE_EXPORTER": "<REPO_DIR>/bridge/export_companion.py",
+    "COMPANION_DB": "<COMPANION_DATA_ROOT>/runtime/companion-v2.sqlite3",
+    "COMPANION_DATA_ROOT": "<ASTROBOT_HOME>/data/plugin_data/astrbot_plugin_private_companion",
+    "DSH_BRIDGE_ROLE": "<ROLE_LABEL>",
+    "DSH_BRIDGE_SOURCE": "qq/companion"
+  }
+}
